@@ -33,10 +33,12 @@ class AuthController extends Controller
         }
 
         $token = $user->createToken('hris-token')->plainTextToken;
+        $token_expired = $user->createToken('hris-token')->accessToken->expires_at;
 
         return response()->json([
             'user' => $user,
-            'token' => $token
+            'token' => $token,
+            'token_expired' => $token_expired
         ], 200);
     }
 
