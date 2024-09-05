@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Attendance;
 use App\Models\BasicSalary;
 use App\Models\PermissionRole;
 use App\Models\User;
@@ -31,5 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->call(HolidaySeeder::class);
         $this->call(LeaveTypeSeeder::class);
         $this->call(LeaveSeeder::class);
+        $this->call(AttendanceSeeder::class);
+        $this->call(PayrollSeeder::class);
     }
 }
