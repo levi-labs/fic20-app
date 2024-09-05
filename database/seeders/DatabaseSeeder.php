@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BasicSalary;
 use App\Models\PermissionRole;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -24,5 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(DepartmentSeeder::class);
         $this->call(DesignationSeeder::class);
+        $this->call(ShiftSeeder::class);
+        $this->call(BasicSalarySeeder::class);
     }
 }
