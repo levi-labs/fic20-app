@@ -28,5 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ShiftSeeder::class);
         $this->call(BasicSalarySeeder::class);
         $this->call(RoleUserSeeder::class);
+        $this->call(HolidaySeeder::class);
+        $this->call(LeaveTypeSeeder::class);
+        $this->call(LeaveSeeder::class);
     }
 }
