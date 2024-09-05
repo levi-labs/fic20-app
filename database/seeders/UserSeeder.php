@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -12,6 +14,46 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        User::factory()->create([
+            'name' => 'Super Admin',
+            // 'username' => 'superadmin',
+            // 'profile_image' => 'https://via.placeholder.com/150',
+            'email' => 'superadmin@hrm.com',
+            'password' => Hash::make('12345678'),
+            // 'shift_id' => null,
+            // 'status' => 'Enable',
+            // 'department_id' => null,
+            // 'designation_id' => null,
+            // 'role_id' => \App\Models\Role::where('name', 'admin')->first()->id,
+
+            // 'phone' => '085895226892',
+            // 'address' => 'Surabaya, East Java, Indonesia',
+            // 'company_id' => 1,
+            // 'is_superadmin' => 1,
+            // 'user_type' => 'employee',
+            // 'login_enabled' => 1,
+            // 'created_by' => 1, // Assuming Super Admin is created by itself
+        ]);
+
+        User::factory()->create([
+            'name' => 'Bahri',
+            // 'username' => 'bahri_admin',
+            // 'profile_image' => 'https://via.placeholder.com/150',
+            'email' => 'bahri@hrm.com',
+            'password' => Hash::make('12345678'),
+            // 'shift_id' => null,
+            // 'status' => 'Enable',
+            // 'department_id' => null,
+            // 'designation_id' => null,
+            // 'role_id' => \App\Models\Role::where('name', 'admin')->first()->id,
+
+            // 'phone' => '085895226892',
+            // 'address' => 'Surabaya, East Java, Indonesia',
+            // 'company_id' => 1,
+            // 'is_superadmin' => 0,
+            // 'user_type' => 'employee',
+            // 'login_enabled' => 1,
+            //'created_by' => 1, // Created by Super Admin
+        ]);
     }
 }
